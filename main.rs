@@ -12,7 +12,7 @@ fn main() {
   let mut counter = 0;
   for result in reader.records() {
     if counter % 100 == 0 {
-        eprintln!("{}", counter);
+        eprint!("{}\r", counter);
     }
     counter += 1;
     let result_data = &result.unwrap();
@@ -38,4 +38,5 @@ fn main() {
     // let s_ = std::str::from_vec(new_seq).expect("invalid utf-8 sequence");
     // println!("{}", s_);
   }
+  eprintln!("");
 }
